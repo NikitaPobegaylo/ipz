@@ -37,6 +37,7 @@ class Body_type(models.Model):
 	name = models.CharField(max_length=150),
 	description = models.TextField(max_length=1000),
 
+
 class Car(models.Model):
 	mark = models.CharField(max_length=50),
 	manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE),
@@ -51,6 +52,7 @@ class Car(models.Model):
 	code3 = models.CharField(max_length=50),
 	price = models.IntegerField(default=0),
 	employee = models.ForeignKey(Employee, on_delete=models.CASCADE),
+
 
 class Customer(models.Model):
 	name = models.CharField(max_length=150),
